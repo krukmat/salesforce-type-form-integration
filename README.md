@@ -1,5 +1,7 @@
 # Salesforce App
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/37f7e16452d149ae895246b6eeecebae)](https://app.codacy.com/manual/krukmat/salesforce-type-form-integration?utm_source=github.com&utm_medium=referral&utm_content=krukmat/salesforce-type-form-integration&utm_campaign=Badge_Grade_Settings)
+
 This guide helps Salesforce developers who are new to Visual Studio Code go from zero to a deployed app using Salesforce Extensions for VS Code and Salesforce CLI.
 
 ## Part 1: Choosing a Development Model
