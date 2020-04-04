@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Q&A" icon-name="custom:custom63">
+
+        <div class="slds-m-around_medium">
+            <div class="slds-m-bottom_small">
+                <lightning-input type="text"
+                   value={sVal}
+                   label="Question"
+                   onchange={updateSeachKey}
+                   ></lightning-input>
+             </div>
+                <template if:true={questionsAndAnswers.data}>
+                    <lightning-datatable
+                        key-field="Id"
+                        data={questionsAndAnswers.data}
+                        columns={columns}>
+                    </lightning-datatable>
+                </template>
+                <template if:true={questionsAndAnswers.error}>
+                    <!-- handle Apex error -->
+                </template>
+        </div>
+    </lightning-card>
+</template>
