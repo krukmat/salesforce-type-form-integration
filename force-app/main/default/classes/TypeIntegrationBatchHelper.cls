@@ -2,7 +2,7 @@ public with sharing class TypeIntegrationBatchHelper {
     
 	// Map of account by email
     public static Map<String, Account> getAccounts(Set<String> emails){
-        List<Account> existentAccounts = [SELECT Id, Email__c, (select Form__c, Question__c FROM QuestionsAndAnswers__r), number_of_questions__c FROM Account WHERE Email__c in :emails];
+        List<Account> existentAccounts = [SELECT Id, Email__c, (select Form__c, Question__c FROM QuestionsAndAnswers__r), number_of_questions__c FROM Account WHERE Email__c in :emails WITH SECURITY_ENFORCED];
         Map<String, Account> accountByEmail = new Map<String, Account>();
         for (Account acc: existentAccounts){
             accountByEmail.put(acc.Email__c, acc);
